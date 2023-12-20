@@ -8,6 +8,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Color;
+import javax.swing.UIManager;
 
 public class Main {
 
@@ -43,6 +45,8 @@ public class Main {
 	 */
 	private void initialize() {
 		frmGui = new JFrame();
+		frmGui.setBackground(new Color(246, 244, 219));
+		frmGui.getContentPane().setBackground(UIManager.getColor("Button.shadow"));
 		frmGui.setTitle("GUI00");
 		frmGui.setBounds(100, 100, 450, 300);
 		frmGui.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -69,7 +73,7 @@ public class Main {
 		}
 		return btnNewButton;
 	}
-	
+	//--------Functions------
 	private void btnAlert() {
 		JOptionPane.showMessageDialog(null, "Alert를 눌렀습니다.");
 	}
